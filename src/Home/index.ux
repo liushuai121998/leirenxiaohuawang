@@ -14,9 +14,8 @@
             <list-item type="content-reply" class="content__reply">
               <text class="time">{{dateNow}}</text>
               <div class="content-text">
-                <div class="content-text__content"> 
-                  <text>{{item.content}}</text>
-                </div>
+                <text class="content-text__title">{{item.title}}</text>
+                <text>{{item.content}}</text>
               </div>
             </list-item>
           </list>

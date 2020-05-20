@@ -1,5 +1,6 @@
   .home {
     background-image: url(../Common/bg.png);
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -8,7 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 120px;
+    margin-top: 150px;
   }
   .title__icon {
       height: 75px;
@@ -41,7 +42,7 @@
   .content-item {
     display: flex;
     flex-direction: column;
-    padding: 20px 50px;
+    padding: 0 50px;
     opacity: 0.93;
     height: 500px;
     background-color: #fff;
@@ -52,7 +53,7 @@
   .content__reply {
     display: flex;
     flex-direction: column;
-    height: 460px;
+    padding: 20px 0;
   }
   .content__reply text {
     font-size: 28px;
@@ -189,18 +190,12 @@
       text-align: center;
   }
 
-  .en {
-      margin-bottom: 30px;
-  }
   .content-text {
       display: flex;
-      flex-direction: row;
-      flex: 1;
-      align-items: center;
-  }
-  .content-text__content {
-      flex: 1;
-      display: flex;
       flex-direction: column;
-      align-items: center;
+
+  }
+
+  .content-text__title{
+    margin-bottom: 15px;
   }
