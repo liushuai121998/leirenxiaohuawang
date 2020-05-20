@@ -22,14 +22,23 @@ export default Custom_page({
     const $appDef = this.$app.$def
     const {data} = await $appDef.$http.get(`/joke/index?key=${$appDef.key}&num=1`)
     if(data.code === 200) {
-      this.newsList = data.newslist
+      this.newsList = data.newslist.map(item => {
+        if(item.content && item.content.indexOf('<br/>') >= 0) {
+          item.content = item.content.split('<br/>')
+        }
+        return item
+      })
+      // console.log(this.newslist)
+      // prompt.showToast({
+      //   message: this.newslist[0].content
+      // })
     }
   },
   onShow() {
   },
   longPress(item, e) {
     clipboard.set({
-      text: `${item.title}\n${item.content}`,
+      text: `${item.title}\n${item.content ? item.content.join('') : ''}`,
       success () {
         prompt.showToast({
           message: '复制成功'

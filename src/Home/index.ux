@@ -15,7 +15,9 @@
               <text class="time">{{dateNow}}</text>
               <div class="content-text">
                 <text class="content-text__title">{{item.title}}</text>
-                <text>{{item.content}}</text>
+                <block for="subItem in item.content">
+                  <text>{{subItem}}</text>
+                </block>
               </div>
             </list-item>
           </list>
